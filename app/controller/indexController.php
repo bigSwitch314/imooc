@@ -13,7 +13,6 @@ class indexController extends \core\imooc
         $temp = \core\lib\conf::get('controller', 'route');
         p($temp);
         $temp = \core\lib\conf::get('action', 'route');
-        p($temp);
 
         $data = 'Hello Word!';
         $title = '视图文件';
