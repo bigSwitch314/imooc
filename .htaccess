@@ -1,0 +1,6 @@
+#nginx rewrite rule
+
+#rewrite ^(.*)/(\w+)/(\w+)$ $1/index.php?r=$2/$3;
+#rewrite ^(.*)/(\w+)$ $1/index.php?r=$2;
+rewrite ^(https?://[^/])* $1/index.php;
+#end nginx rewrite rule

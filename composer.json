@@ -1,0 +1,19 @@
+{
+	"name": "IMOOC PHP",
+	"description": "PHP Framework",
+	"type": "Framework",
+	"key": ["PHP","PHP Framework"],
+	"require": {
+		"PHP": ">=5.3.0",
+		"filp/whoops": "*"
+	},
+	"config": {
+        "github-protocols": ["https"]
+    },
+    "repositories": {
+        "packagist": {
+        "type": "composer",
+        "url": "https://packagist.phpcomposer.com"
+        }
+    }
+}
