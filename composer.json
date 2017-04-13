@@ -5,7 +5,8 @@
 	"key": ["PHP","PHP Framework"],
 	"require": {
 		"PHP": ">=5.3.0",
-		"filp/whoops": "*"
+		"filp/whoops": "*",
+		"catfan/medoo": "*"		
 	},
 	"config": {
         "github-protocols": ["https"]

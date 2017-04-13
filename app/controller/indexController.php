@@ -1,10 +1,25 @@
 <?php
 namespace app\controller;
+use app\model\studentModel;
 
 class indexController extends \core\imooc
 {
 	public function index(){
-		$model = new \core\lib\model();
+		$model = new studentModel();
+		//$data = array('name'=>'IMOOC2');
+		$model->delOne(3);
+		$res = $model->lists();
+		p($res);
+		die;
+		$data = array(
+            'name'     => 'IMOOC',
+            'age'      => '27',
+            'hometown' => '北京'
+	    );
+	    $res = $model->insert('student', $data);
+	    p($res);
+		$res = $model->select("student", "*");
+		p($res);die;
 		$sql = "select * from student";
 		$res = $model->query($sql);
 		p($res->fetchAll());
