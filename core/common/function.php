@@ -10,4 +10,37 @@ function p($var)
 	}
 }
 
+/**
+ * @param $name
+ * @param bool|false $default
+ * @param bool|false $fitt
+ * @return bool
+ */
+function post($name, $default=false, $fitt=false){
+	if(isset($_POST[$name])){
+		if($fitt){
+			switch($fitt){
+				case 'int':
+					if(is_numeric($_POST[$name])){
+						return $_POST[$name];
+					} else {
+						return $default;
+					}
+					break;
+				default: ;
+			}
+		} else {
+			return $default;
+		}
+	} else {
+		return $default;
+	}
+}
 
+/**
+ * @param $url
+ */
+function jump($url){
+	header('location:'.$url);
+	exit;
+}
