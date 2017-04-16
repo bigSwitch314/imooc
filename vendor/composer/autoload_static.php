@@ -15,6 +15,10 @@ class ComposerStaticInitdcad2ecd101c45a60cae094137cc00d8
         array (
             'Psr\\Log\\' => 8,
         ),
+        'M' => 
+        array (
+            'Medoo\\' => 6,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -26,6 +30,20 @@ class ComposerStaticInitdcad2ecd101c45a60cae094137cc00d8
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
+        'Medoo\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/catfan/medoo/src',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'T' => 
+        array (
+            'Twig_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/twig/lib',
+            ),
+        ),
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -33,6 +51,7 @@ class ComposerStaticInitdcad2ecd101c45a60cae094137cc00d8
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitdcad2ecd101c45a60cae094137cc00d8::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitdcad2ecd101c45a60cae094137cc00d8::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitdcad2ecd101c45a60cae094137cc00d8::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }
